@@ -1,4 +1,4 @@
-package org.example.coloresconsola;
+package org.example.coloresyemojis;
 
 public class ColoresTexto {
     public static final String ANSI_BLACK = "\u001B[30m";

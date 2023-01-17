@@ -1,5 +1,6 @@
 package org.example.ejercicio2;
-import org.example.coloresconsola.ColoresTexto;
+import org.example.coloresyemojis.Emojis;
+import org.example.coloresyemojis.ColoresTexto;
 
 public class Ejercicio2 {
     public static void main(String[] args) {
@@ -7,9 +8,8 @@ public class Ejercicio2 {
         int j = 0;
         int k = 0;
         int edad = 17;
-        String flamenca = "\uD83D\uDC83";
-        String party = "\uD83C\uDF89\uD83C\uDF8A";
-        ColoresTexto color=new ColoresTexto();
+        Emojis emoji = new Emojis();
+        ColoresTexto color = new ColoresTexto();
         while (i <10) {
             if(i==9){
                 System.out.println(color.ANSI_BLUE+"Vuelta numero " + (++i) + " del while"+color.ANSI_RESET);
@@ -33,7 +33,7 @@ public class Ejercicio2 {
         }
 
         edad++;
-        System.out.println(color.ANSI_YELLOW+"Acaba de cumplir un año más!!!"+party+party+color.ANSI_RESET);
+        System.out.println(color.ANSI_YELLOW+"Acaba de cumplir un año más!!!"+ emoji.PARTY + emoji.PARTY +color.ANSI_RESET);
 
         if(edad > 21){
             System.out.println(edad+" años. Puede beber en USA y conducir");
@@ -58,6 +58,6 @@ public class Ejercicio2 {
                 }
             }
         }
-        System.out.println(flamenca);
+        System.out.println(emoji.FLAMENCA+emoji.SUNGLASSES);
     }
 }

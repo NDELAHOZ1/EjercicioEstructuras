@@ -1,6 +1,6 @@
-package org.example.ejercicio2;
-import org.example.coloresyemojis.Emojis;
-import org.example.coloresyemojis.ColoresTexto;
+package com.unisys.ejercicios;
+import com.unisys.coloresyemojis.Emojis;
+import com.unisys.coloresyemojis.ColoresTexto;
 
 public class Ejercicio2 {
     public static void main(String[] args) {

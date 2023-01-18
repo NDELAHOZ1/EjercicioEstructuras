@@ -13,7 +13,7 @@ public class Ejercicio4 {
         System.out.println(colores.ANSI_YELLOW+"saludo es: "+saludo+colores.ANSI_RESET);
         System.out.println("Longitud de saludo es: "+saludo.length());
         System.out.println("Cuarto caracter de saludo es: "+saludo.charAt(3));
-        System.out.println("Posicion de \"l\" en saludo es: "+saludo.indexOf('l')+"\n");
+        System.out.println("Posicion de \"l\" en saludo es: "+(saludo.indexOf('l')+1)+"\n");
         System.out.println("Saludo en MAYUS: "+saludo.toUpperCase()+emoji.HELLO);
         System.out.println("Saludo en minus: "+saludo.toLowerCase()+emoji.HELLO);
 

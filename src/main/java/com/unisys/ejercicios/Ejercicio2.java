@@ -58,6 +58,6 @@ public class Ejercicio2 {
                 }
             }
         }
-        System.out.println(emoji.FLAMENCA+emoji.SUNGLASSES);
+        System.out.println(emoji.NERD);
     }
 }

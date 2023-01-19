@@ -11,5 +11,5 @@ public class Emojis {
     public static String WINK = "\uD83D\uDE09";
     public static String CRAZY = "\uD83E\uDD2A";
     public static String SILENCE = "\uD83E\uDD2B";
-
+    public static String DOG = "\uD83D\uDC36";
 }

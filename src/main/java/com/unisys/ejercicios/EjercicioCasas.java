@@ -1,5 +1,9 @@
 package com.unisys.ejercicios;
 
+import com.unisys.clases.Casa;
+import com.unisys.clases.Chalet;
+import com.unisys.clases.ChaletLujo;
+import com.unisys.clases.Piso;
 import com.unisys.coloresyemojis.ColoresTexto;
 import com.unisys.coloresyemojis.Emojis;
 

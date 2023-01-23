@@ -1,5 +1,8 @@
 package com.unisys.coloresyemojis;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ColoresTexto {
     public static final String ANSI_BLACK = "\u001B[30m";
     public static final String ANSI_RED = "\u001B[31m";
@@ -18,4 +21,26 @@ public class ColoresTexto {
     public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
     public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
     public static String ANSI_RESET = "\u001B[0m";
+
+    public static Map<Integer, String> crearDiccionarioColores() {
+        Map<Integer, String > map = new HashMap<>();
+        map.put(0,ANSI_RESET);
+        map.put(1,ANSI_YELLOW);
+        map.put(2,ANSI_BLUE);
+        map.put(3,ANSI_BLACK);
+        map.put(4,ANSI_CYAN);
+        map.put(5,ANSI_GREEN);
+        map.put(6,ANSI_PURPLE);
+        map.put(7,ANSI_RED);
+        map.put(8,ANSI_WHITE);
+        map.put(9,ANSI_YELLOW_BACKGROUND);
+        map.put(10,ANSI_BLUE_BACKGROUND);
+        map.put(11,ANSI_BLACK_BACKGROUND);
+        map.put(12,ANSI_CYAN_BACKGROUND);
+        map.put(13,ANSI_GREEN_BACKGROUND);
+        map.put(14,ANSI_PURPLE_BACKGROUND);
+        map.put(15,ANSI_RED_BACKGROUND);
+        map.put(16,ANSI_WHITE_BACKGROUND);
+        return map;
+    }
 }

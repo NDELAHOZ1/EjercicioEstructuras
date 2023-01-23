@@ -1,4 +1,4 @@
-package com.unisys.ejercicios;
+package com.unisys.clases;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,8 +1,11 @@
 package com.unisys.ejercicios;
 
+import com.unisys.clases.Perro;
+import com.unisys.clases.PerroLombock;
 import com.unisys.coloresyemojis.ColoresTexto;
 import com.unisys.coloresyemojis.Emojis;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class Ejercicio5 {
@@ -26,7 +29,7 @@ public class Ejercicio5 {
         PerroLombock mino = new PerroLombock();
         System.out.println("Datos de Mino: "+mino);
 
-        PerroLombock piro = new PerroLombock("Piro","Golden Retriever",new Date(2020, 05, 12),'M');
+        PerroLombock piro = new PerroLombock("Piro","Golden Retriever",new Date(2020, Calendar.MAY, 12),'M');
         System.out.println("Datos de Piro: "+piro);
         System.out.println("Raza de Piro: "+piro.getRaza());
         System.out.println("Fecha de Nacimiento de Piro: "+piro.getFechaNacimiento());

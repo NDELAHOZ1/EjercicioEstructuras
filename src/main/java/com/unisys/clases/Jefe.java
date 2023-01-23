@@ -1,4 +1,4 @@
-package com.unisys.ejercicios;
+package com.unisys.clases;
 
 public class Jefe extends Empleado{
     private String numeroDespacho;

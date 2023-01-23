@@ -1,4 +1,4 @@
-package com.unisys.ejercicios;
+package com.unisys.clases;
 
 import lombok.Data;
 
@@ -8,7 +8,7 @@ public class ChaletLujo extends Chalet{
 
     public ChaletLujo() {
         super();
-        this.banios = banios;
+        this.banios = 0;
     }
 
     public ChaletLujo(String direccion, Double metrosCuadrados, Integer plantas, boolean adosado, Integer banios) {

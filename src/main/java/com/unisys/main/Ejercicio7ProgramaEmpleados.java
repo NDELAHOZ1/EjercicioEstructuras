@@ -1,15 +1,15 @@
 package com.unisys.main;
 
 import com.unisys.coloresyemojis.ColoresTexto;
-import com.unisys.ejercicios.Currito;
-import com.unisys.ejercicios.Empleado;
-import com.unisys.ejercicios.Jefe;
-import java.util.HashMap;
+import com.unisys.clases.Currito;
+import com.unisys.clases.Empleado;
+import com.unisys.clases.Jefe;
+
 import java.util.Map;
 
 public class Ejercicio7ProgramaEmpleados {
     public static void main(String[] args) {
-        Map<Integer, String> map = crearDiccionarioColores();
+        Map<Integer, String> map = ColoresTexto.crearDiccionarioColores();
         Empleado empleado1 = new Empleado();
         Empleado empleado2 = new Empleado("Pepe", "12345678A", 987654321, "Pensamiento lógico y trabajo en equipo", 22334.40, "Currito", "Informatica", 2);
 
@@ -46,27 +46,4 @@ public class Ejercicio7ProgramaEmpleados {
     public static void imprimirInfoEmpleado(Map<Integer, String> map,Empleado empleado){
         System.out.println(map.get((int)(Math.random()*15)+1)+"Datos empleado " + empleado.getNombre() + "\nDNI:" + empleado.getDni() + "\nTlf: " + empleado.getTlf() + "\nHabilidades: " + empleado.getHabilidades() + "\nSueldo: " + empleado.getSueldo() + "\nCargo: " + empleado.getCargo() + "\nDepartamento: " + empleado.getDepartamento() + "\nAnios en la empresa: " + empleado.getAniosEmpresa()+map.get(0));
     }
-
-    private static Map<Integer, String> crearDiccionarioColores() {
-        Map<Integer, String > map = new HashMap<Integer, String>();
-        map.put(0,ColoresTexto.ANSI_RESET);
-        map.put(1,ColoresTexto.ANSI_YELLOW);
-        map.put(2,ColoresTexto.ANSI_BLUE);
-        map.put(3,ColoresTexto.ANSI_BLACK);
-        map.put(4,ColoresTexto.ANSI_CYAN);
-        map.put(5,ColoresTexto.ANSI_GREEN);
-        map.put(6,ColoresTexto.ANSI_PURPLE);
-        map.put(7,ColoresTexto.ANSI_RED);
-        map.put(8,ColoresTexto.ANSI_WHITE);
-        map.put(9,ColoresTexto.ANSI_YELLOW_BACKGROUND);
-        map.put(10,ColoresTexto.ANSI_BLUE_BACKGROUND);
-        map.put(11,ColoresTexto.ANSI_BLACK_BACKGROUND);
-        map.put(12,ColoresTexto.ANSI_CYAN_BACKGROUND);
-        map.put(13,ColoresTexto.ANSI_GREEN_BACKGROUND);
-        map.put(14,ColoresTexto.ANSI_PURPLE_BACKGROUND);
-        map.put(15,ColoresTexto.ANSI_RED_BACKGROUND);
-        map.put(16,ColoresTexto.ANSI_WHITE_BACKGROUND);
-        return map;
-    }
-
 }

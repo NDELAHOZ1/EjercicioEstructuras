@@ -1,4 +1,4 @@
-package com.unisys.ejercicios;
+package com.unisys.clases;
 
 public class Currito extends Empleado{
     private Jefe responsable;

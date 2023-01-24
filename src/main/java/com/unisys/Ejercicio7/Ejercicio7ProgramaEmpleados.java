@@ -1,4 +1,4 @@
-package com.unisys.main;
+package com.unisys.Ejercicio7;
 
 import com.unisys.coloresyemojis.ColoresTexto;
 import com.unisys.clases.Currito;

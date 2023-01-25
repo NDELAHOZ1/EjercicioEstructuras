@@ -26,31 +26,36 @@ public class Ejercicio8Colecciones {
     }
     public static void main(String[] args) {
         Pieza pieza1 = new Pieza("SSD","Memoria");
-        Ordenador portatil = new Ordenador("Dell","Latitude3123",pieza1);
-        //System.out.println(portatil.getPieza().getNombre());
-
         Pieza pieza2 = new Pieza("Bateria","Periferico");
         Pieza pieza3 = new Pieza("Intel I7","Procesador");
         Pieza pieza4 = new Pieza("RAM","Memoria");
         Pieza pieza5 = new Pieza();
+        List<Pieza> listadoPiezas = new ArrayList<>();
+        listadoPiezas.add(pieza1);
+        listadoPiezas.add(pieza2);
+        listadoPiezas.add(pieza3);
+        listadoPiezas.add(pieza4);
+        Ordenador portatil = new Ordenador("Dell","Latitude3123",listadoPiezas);
+        System.out.println(ColoresTexto.ANSI_BLACK+ColoresTexto.ANSI_WHITE_BACKGROUND+"Piezas de Ordenador:"+ColoresTexto.ANSI_RESET);
+        for (int numpieza=0;numpieza<listadoPiezas.size();numpieza++)
+        {
+            System.out.println(portatil.getPieza().get(numpieza).getNombre());
+        }
         Set<Pieza> misPiezas = new HashSet<>();
         misPiezas.add(pieza1);
         misPiezas.add(pieza2);
         misPiezas.add(pieza3);
         misPiezas.add(pieza4);
-        System.out.println(ColoresTexto.ANSI_BLUE+"conjunto 4 piezas: \n"+ColoresTexto.ANSI_RESET+misPiezas);
-        pieza5=pieza4;
+        System.out.println(ColoresTexto.ANSI_BLUE+"Conjunto 4 piezas: \n"+ColoresTexto.ANSI_RESET+misPiezas);
         pieza4 = new Pieza("RAM","Memoria");
         misPiezas.add(pieza4);
-        System.out.println(ColoresTexto.ANSI_RED+"conjunto 4 piezas[dos instancias pieza4 anadida]: \n"+ColoresTexto.ANSI_RESET+misPiezas);
+        misPiezas.add(pieza4);
+        System.out.println(ColoresTexto.ANSI_RED+"Conjunto 4 piezas [dos instancias de pieza4 anadidas]: \n"+ColoresTexto.ANSI_RESET+misPiezas);
 
 
         List<Pieza> piezasOrdenadas = new ArrayList<>(misPiezas);
         piezasOrdenadas.sort(Comparator.comparing(String::valueOf));
         System.out.println(ColoresTexto.ANSI_YELLOW+"Conjunto 4 piezas ordenadas: \n"+ColoresTexto.ANSI_RESET+piezasOrdenadas);;
-
-        /*TreeSet<Pieza> sortSet = new TreeSet<Pieza>(piezasOrdenadas);
-        System.out.println(ColoresTexto.ANSI_PURPLE+"TreeSet 4 piezas: \n"+ColoresTexto.ANSI_RESET+sortSet);*/
 
         Map<String,Cliente> mapa = new HashMap<>();
         for (int i=0;i<10;i++){

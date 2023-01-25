@@ -15,11 +15,11 @@ public class Ordenador implements Serializable {
         this.pieza = new ArrayList<>();
     }
 
-    public Ordenador(String marca, String modelo, Pieza pieza) {
+    public Ordenador(String marca, String modelo, List<Pieza> pieza) {
         this.marca = marca;
         this.modelo = modelo;
         this.pieza = new ArrayList<>();
-        this.pieza.add(pieza);
+        this.pieza = pieza;
     }
 
     public String getMarca() {

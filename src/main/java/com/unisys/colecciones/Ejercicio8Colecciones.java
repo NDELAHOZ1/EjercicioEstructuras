@@ -29,7 +29,6 @@ public class Ejercicio8Colecciones {
         Pieza pieza2 = new Pieza("Bateria","Periferico");
         Pieza pieza3 = new Pieza("Intel I7","Procesador");
         Pieza pieza4 = new Pieza("RAM","Memoria");
-        Pieza pieza5 = new Pieza();
         List<Pieza> listadoPiezas = new ArrayList<>();
         listadoPiezas.add(pieza1);
         listadoPiezas.add(pieza2);
@@ -49,8 +48,10 @@ public class Ejercicio8Colecciones {
         System.out.println(ColoresTexto.ANSI_BLUE+"Conjunto 4 piezas: \n"+ColoresTexto.ANSI_RESET+misPiezas);
         pieza4 = new Pieza("RAM","Memoria");
         misPiezas.add(pieza4);
-        misPiezas.add(pieza4);
-        System.out.println(ColoresTexto.ANSI_RED+"Conjunto 4 piezas [dos instancias de pieza4 anadidas]: \n"+ColoresTexto.ANSI_RESET+misPiezas);
+        //Aunque pieza 4 es aniadida dos veces como tiene el mismo contenido no se aniade realmente al set.
+        //Esto es posible porque se ha generado el equals() y el hashcode() de Pieza que es el que permite
+        //que Set compare y detecte qu hay dos Piezas iguales
+        System.out.println(ColoresTexto.ANSI_RED+"Conjunto 4 piezas [dos piezas con el mismo contenido]: \n"+ColoresTexto.ANSI_RESET+misPiezas);
 
 
         List<Pieza> piezasOrdenadas = new ArrayList<>(misPiezas);

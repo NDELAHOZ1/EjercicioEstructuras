@@ -1,6 +1,7 @@
 package com.unisys.colecciones;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Pieza implements Serializable {
     private String nombre;
@@ -36,5 +37,18 @@ public class Pieza implements Serializable {
                 "nombre='" + nombre + '\'' +
                 ", tipoPieza='" + tipoPieza + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pieza pieza = (Pieza) o;
+        return Objects.equals(nombre, pieza.nombre) && Objects.equals(tipoPieza, pieza.tipoPieza);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, tipoPieza);
     }
 }

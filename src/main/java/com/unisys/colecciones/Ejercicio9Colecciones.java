@@ -1,6 +1,7 @@
 package com.unisys.colecciones;
 
 import com.unisys.coloresyemojis.ColoresTexto;
+import com.unisys.coloresyemojis.Emojis;
 
 import java.util.*;
 
@@ -52,12 +53,12 @@ public class Ejercicio9Colecciones {
         List<Actor> listadoActores = new ArrayList<>();
         listadoActores.add(actorPrincipal);
         listadoActores.add(actrizPrincipal);
-        serieTV.setTitulo("Titans");
+        serieTV.setTitulo("ORIGEN JAVA");
         serieTV.setGenero("Ciencia Ficcion, Accion");
         serieTV.setAnioPublicacion(2020);
         serieTV.setReparto(listadoActores);
 
-        System.out.println(ColoresTexto.ANSI_RED+ColoresTexto.ANSI_WHITE_BACKGROUND+"Reparto:"+ColoresTexto.ANSI_RESET);
+        System.out.println(Emojis.TV+ColoresTexto.ANSI_RED+ColoresTexto.ANSI_BLACK_BACKGROUND+"REPARTO DE "+serieTV.getTitulo()+ColoresTexto.ANSI_RESET+Emojis.TV);
         for (Actor actor:serieTV.getReparto()){
             System.out.println(actor.getNombre());
         }

@@ -15,4 +15,6 @@ public class Emojis {
     public static String FLAT ="\uD83C\uDFE2";
     public static String BIGHOUSE = "\uD83C\uDFE1";
     public static String HOUSE = "\uD83C\uDFE0";
+    public static String CLAPPER = "\uD83C\uDFAC";
+    public static String TV = "\uD83D\uDCFA";
 }

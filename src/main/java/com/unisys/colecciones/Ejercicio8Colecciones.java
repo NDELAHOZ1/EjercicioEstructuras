@@ -44,24 +44,21 @@ public class Ejercicio8Colecciones {
         misPiezas.add(pieza4);
         System.out.println(ColoresTexto.ANSI_RED+"conjunto 4 piezas[dos instancias pieza4 anadida]: \n"+ColoresTexto.ANSI_RESET+misPiezas);
 
-        List<Pieza> piezasOrdenadas = new ArrayList<>();
-        piezasOrdenadas.add(pieza1);
-        piezasOrdenadas.add(pieza2);
-        piezasOrdenadas.add(pieza3);
-        piezasOrdenadas.add(pieza4);
-        piezasOrdenadas.add(pieza5);
+
+        List<Pieza> piezasOrdenadas = new ArrayList<>(misPiezas);
         piezasOrdenadas.sort(Comparator.comparing(String::valueOf));
         System.out.println(ColoresTexto.ANSI_YELLOW+"Conjunto 4 piezas ordenadas: \n"+ColoresTexto.ANSI_RESET+piezasOrdenadas);;
+
+        /*TreeSet<Pieza> sortSet = new TreeSet<Pieza>(piezasOrdenadas);
+        System.out.println(ColoresTexto.ANSI_PURPLE+"TreeSet 4 piezas: \n"+ColoresTexto.ANSI_RESET+sortSet);*/
 
         Map<String,Cliente> mapa = new HashMap<>();
         for (int i=0;i<10;i++){
             mapa.put(""+((int)(Math.random()*100)+1)+i,new Cliente(cadenaAleatoria(3),"C/"+cadenaAleatoria(5),""+((int)(Math.random()*999999999)+1),cadenaAleatoria(3)+"@"+cadenaAleatoria(4)+"."+cadenaAleatoria(3)));
         }
-
+        System.out.println(ColoresTexto.ANSI_GREEN + "Visualizar el mapa:"+ColoresTexto.ANSI_RESET);
         for (String key : mapa.keySet()) {
-            System.out.println(ColoresTexto.ANSI_GREEN + "Visualizar el mapa: \n" + "CLAVE:" + ColoresTexto.ANSI_BLACK_BACKGROUND+key+ColoresTexto.ANSI_RESET + "\n"+ mapa.get(key)+"\n");
+            System.out.println(ColoresTexto.ANSI_GREEN + "CLAVE:" + ColoresTexto.ANSI_BLACK_BACKGROUND+key+ColoresTexto.ANSI_RESET + "\n"+ mapa.get(key));
         }
-
     }
-
 }
